@@ -12,3 +12,4 @@ Currently, two official plugins are available:
 - React Query
 - react-hot-toast
 - react hook form
+- React-icons
