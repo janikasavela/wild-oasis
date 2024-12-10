@@ -10,19 +10,18 @@ import FormRow from '../../ui/FormRow'
 import { useCreateCabin } from './useCreateCabin'
 import { useEditCabin } from './useEditCabin'
 
-function CreateCabinForm({ cabinToEdit, onCloseModal }) {
+function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
+  const { isCreating, createCabin } = useCreateCabin()
+  const { isEditing, editCabin } = useEditCabin()
+  const isWorking = isCreating || isEditing
+
   const { id: editId, ...editValues } = cabinToEdit
-  let isEditSession = Boolean(editId)
+  const isEditSession = Boolean(editId)
 
   const { register, handleSubmit, reset, getValues, formState } = useForm({
     defaultValues: isEditSession ? editValues : {},
   })
   const { errors } = formState
-
-  const { isCreating, createCabin } = useCreateCabin()
-  const { isEditing, editCabin } = useEditCabin()
-
-  const isWorking = isCreating || isEditing
 
   function onSubmit(data) {
     const image = typeof data.image === 'string' ? data.image : data.image[0]
@@ -50,7 +49,7 @@ function CreateCabinForm({ cabinToEdit, onCloseModal }) {
   }
 
   function onError(errors) {
-    console.log(errors)
+    // console.log(errors);
   }
 
   return (
@@ -63,7 +62,9 @@ function CreateCabinForm({ cabinToEdit, onCloseModal }) {
           type='text'
           id='name'
           disabled={isWorking}
-          {...register('name', { required: 'This field is required' })}
+          {...register('name', {
+            required: 'This field is required',
+          })}
         />
       </FormRow>
 
@@ -74,7 +75,10 @@ function CreateCabinForm({ cabinToEdit, onCloseModal }) {
           disabled={isWorking}
           {...register('maxCapacity', {
             required: 'This field is required',
-            min: { value: 1, message: 'Capacity should be at least 1' },
+            min: {
+              value: 1,
+              message: 'Capacity should be at least 1',
+            },
           })}
         />
       </FormRow>
@@ -86,7 +90,10 @@ function CreateCabinForm({ cabinToEdit, onCloseModal }) {
           disabled={isWorking}
           {...register('regularPrice', {
             required: 'This field is required',
-            min: { value: 1, message: 'Capacity should be at least 1' },
+            min: {
+              value: 1,
+              message: 'Capacity should be at least 1',
+            },
           })}
         />
       </FormRow>
@@ -95,12 +102,12 @@ function CreateCabinForm({ cabinToEdit, onCloseModal }) {
         <Input
           type='number'
           id='discount'
-          defaultValue={0}
           disabled={isWorking}
+          defaultValue={0}
           {...register('discount', {
             required: 'This field is required',
             validate: (value) =>
-              parseFloat(value) <= parseFloat(getValues().regularPrice) ||
+              value <= getValues().regularPrice ||
               'Discount should be less than regular price',
           })}
         />
@@ -111,11 +118,13 @@ function CreateCabinForm({ cabinToEdit, onCloseModal }) {
         error={errors?.description?.message}
       >
         <Textarea
-          disabled={isWorking}
           type='number'
           id='description'
           defaultValue=''
-          {...register('description', { required: 'This field is required' })}
+          disabled={isWorking}
+          {...register('description', {
+            required: 'This field is required',
+          })}
         />
       </FormRow>
 
@@ -123,7 +132,6 @@ function CreateCabinForm({ cabinToEdit, onCloseModal }) {
         <FileInput
           id='image'
           accept='image/*'
-          disabled={isWorking}
           {...register('image', {
             required: isEditSession ? false : 'This field is required',
           })}

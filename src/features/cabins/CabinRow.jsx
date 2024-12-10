@@ -77,10 +77,12 @@ function CabinRow({ cabin }) {
         <Modal>
           <Menus.Menu>
             <Menus.Toggle id={cabinId} />
+
             <Menus.List id={cabinId}>
               <Menus.Button icon={<HiSquare2Stack />} onClick={handleDuplicate}>
                 Duplicate
               </Menus.Button>
+
               <Modal.Open opens='edit'>
                 <Menus.Button icon={<HiPencil />}>Edit</Menus.Button>
               </Modal.Open>
@@ -98,7 +100,7 @@ function CabinRow({ cabin }) {
               <ConfirmDelete
                 resourceName='cabins'
                 disabled={isDeleting}
-                onClick={() => deleteCabin(cabinId)}
+                onConfirm={() => deleteCabin(cabinId)}
               />
             </Modal.Window>
           </Menus.Menu>
