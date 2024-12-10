@@ -13,3 +13,4 @@ Currently, two official plugins are available:
 - react-hot-toast
 - react hook form
 - React-icons
+- Advanced React Patterns (The Render Props Pattern, Higher-Order Components, The Compound Component Pattern)
