@@ -8,9 +8,11 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 - Styled Components
+- date.fns kirjasto
 - Supabase
 - React Query
 - react-hot-toast
 - react hook form
 - React-icons
 - Advanced React Patterns (The Render Props Pattern, Higher-Order Components, The Compound Component Pattern)
+- Recharts
