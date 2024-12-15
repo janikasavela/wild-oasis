@@ -17,7 +17,7 @@ function ProtectedRoute({ children }) {
   const navigate = useNavigate()
 
   //1. Lataa kirjautunut käyttäjä
-  const { user, isLoading, isAuthenticated } = useUser()
+  const { isLoading, isAuthenticated } = useUser()
 
   //2. Jos kirjautunutta kayttajaa ei ole, ohjaa kirjautumis sivulle
   useEffect(
