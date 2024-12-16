@@ -17,3 +17,4 @@ Currently, two official plugins are available:
 - Advanced React Patterns (The Render Props Pattern, Higher-Order Components, The Compound Component Pattern)
 - Recharts
 - react-error-boundary
+- netlify
