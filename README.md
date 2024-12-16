@@ -16,3 +16,4 @@ Currently, two official plugins are available:
 - React-icons
 - Advanced React Patterns (The Render Props Pattern, Higher-Order Components, The Compound Component Pattern)
 - Recharts
+- react-error-boundary
