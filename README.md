@@ -1,20 +1,27 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Suoritin Udemyn kautta Jonas Schmedtmannin The Ultimate React Course 2024 kurssin, jonka viimeisimmässä osassa rakennettiin React teknologialla sovellus, jonka avulla mökki majoituksia tarjoava yritys voi hallita varauksia, päivittää ja muokata tarjolla olevien mökkien tietoja, kirjata asiakkaita sisään/ulos sekä tarkastella yrityksensä tilastoja, esimerkiksi myyntien määrän kasvua/laskua.
 
-Currently, two official plugins are available:
+Projekti on julkaistu Vercelin kautta ja löytyy osoitteesta:
+https://the-wild-oasis-harjoitus.netlify.app/login
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Voit kirjautua sovellukseen testikäyttäjällä valla@gmail.com ja salasanalla valla
 
-- Styled Components
-- date.fns kirjasto
-- Supabase
-- React Query
-- react-hot-toast
-- react hook form
-- React-icons
-- Advanced React Patterns (The Render Props Pattern, Higher-Order Components, The Compound Component Pattern)
+Kätetetyt teknologiat:
+Framework: React + vite
+Routing: React Router
+DB/API: supabase
+Styling: Styled Components
+Remote State Management: React Query
+UI State management: Context API
+Form management: React Hook Form
+
+Muut työkalut/kirjastot:
+
+- Date-fns
+- React Icons
+- React hot toast
 - Recharts
-- react-error-boundary
-- netlify
+- React hook form
+- Advanced React Patterns (The Render Props Pattern, Higher-Order Components, The Compound Component Pattern)
+- React-error-boundary
