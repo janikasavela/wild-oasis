@@ -8,13 +8,14 @@ https://the-wild-oasis-harjoitus.netlify.app/login
 Voit kirjautua sovellukseen testikäyttäjällä valla@gmail.com ja salasanalla valla
 
 Kätetetyt teknologiat:
-Framework: React + vite
-Routing: React Router
-DB/API: supabase
-Styling: Styled Components
-Remote State Management: React Query
-UI State management: Context API
-Form management: React Hook Form
+
+- Framework: React + vite
+- Routing: React Router
+- DB/API: supabase
+- Styling: Styled Components
+- Remote State Management: React Query
+- UI State management: Context API
+- Form management: React Hook Form
 
 Muut työkalut/kirjastot:
 
