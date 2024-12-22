@@ -1,6 +1,6 @@
 # React + Vite
 
-Suoritin Udemyn kautta Jonas Schmedtmannin The Ultimate React Course 2024 kurssin, jonka viimeisimmässä osassa rakennettiin React teknologialla sovellus, jonka avulla mökki majoituksia tarjoava yritys voi hallita varauksia, päivittää ja muokata tarjolla olevien mökkien tietoja, kirjata asiakkaita sisään/ulos sekä tarkastella yrityksensä tilastoja, esimerkiksi myyntien määrän kasvua/laskua.
+Suoritin Udemyn kautta Jonas Schmedtmannin The Ultimate React Course 2024 kurssin (https://www.udemy.com/course/the-ultimate-react-course/?couponCode=KEEPLEARNING), jonka viimeisimmässä osassa rakennettiin React teknologialla sovellus, jonka avulla mökki majoituksia tarjoava yritys voi hallita varauksia, päivittää ja muokata tarjolla olevien mökkien tietoja, kirjata asiakkaita sisään/ulos sekä tarkastella yrityksensä tilastoja, esimerkiksi myyntien määrän kasvua/laskua.
 
 Projekti on julkaistu Vercelin kautta ja löytyy osoitteesta:
 https://the-wild-oasis-harjoitus.netlify.app/login
